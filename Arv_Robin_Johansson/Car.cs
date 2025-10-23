@@ -8,12 +8,19 @@ namespace Arv_Robin_Johansson
 {
     internal class Car : Vehicle
     {
-        public int NumberOfDoors { get; set; }
-        public Car(string model, string brand, int year, string color, string startUpNoise, int numberOfDoors) : base(brand, model, year, color, startUpNoise)
+        //special property for Car:
+        public int NumberOfDoors { get; set; } = 4;
+        public Car(string brand, string model, int year, string color, string startUpNoise, int numberOfDoors) : base(brand, model, year, color, startUpNoise)
         {
             NumberOfDoors = numberOfDoors;
         }
-
+        //Method that displays all the info about the car:
+        public void CarInfo()
+        {
+            Console.WriteLine($"Märke: {Brand} \nModel: {Model} \nÅrsmodell: {Year} " +
+                $"\nFärg: {Color} \nStartljud: {StartUpNoise} \nAntal dörrar: {NumberOfDoors}");
+        }
+        //Method for removing doors on the car:
         public void RemoveDoors()
         {
             Console.WriteLine("Skriv in hur många dörrar du vill ta bort på bilen.");

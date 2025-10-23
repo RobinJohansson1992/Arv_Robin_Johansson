@@ -8,37 +8,12 @@ namespace Arv_Robin_Johansson
 {
     internal class Vehicle
     {
-        private string _brand;
-        private string _model;
-        private int _year;
-        private string _color;
-        private string _startUpNoise;
-        
-        public string Brand
-        {
-            get { return _brand; }
-            set { _brand = value; }
-        }
-        public string Model
-        {
-            get { return _model; }
-            set { _model = value; }
-        }
-        public int Year
-        {
-            get { return _year; }
-            set { _year = value; }
-        }
-        public string Color
-        {
-            get { return _color; }
-            set { _color = value; }
-        }
-        public string StartUpNoise
-        {
-            get { return _startUpNoise; }
-            set { _startUpNoise = value; }
-        }
+        //properties for all vehicles:
+        public string Brand { get; set; } = "Volvo";
+        public string Model { get; set; } = "V70";
+        public int Year { get; set; } = 2000;
+        public string Color { get; set; } = "silver";
+        public string StartUpNoise { get; set; } = "BRUM";
 
         public Vehicle(string brand, string model, int year, string color, string startUpNoise)
         {
@@ -49,17 +24,33 @@ namespace Arv_Robin_Johansson
             StartUpNoise = startUpNoise;
         }
 
+        //method that displays the start up noise of the vehicle
         public void StartEngine()
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(StartUpNoise);
             Console.ResetColor();
         }
-
-        public void VehicleInfo()
+        //method that changes the color of the vehicle
+        public string ChangeVehicleColor()
         {
-            Console.WriteLine($"Märke: {Brand} \nModel: {Model} \nÅrsmodell: {Year} \nMaxfart: {Color} \nStartljud: {StartUpNoise}");
+            Console.WriteLine("Skriv in färgen du önskar byta till:");
+            string userInput = Console.ReadLine();
+
+            return Color = userInput;
         }
+        //method that randomly sets a new release year of the vehicle:
+        public int ChangeYear()
+        {
+            Console.WriteLine("Tryck enter för att ge fordonet ett nytt tillverkningsår:");
+            Console.ReadKey();
+            Random rnd = new Random();
+            int newYear = rnd.Next(1900, 2025);
+            return Year = newYear;
+        }
+
+        
+
 
     }
 }

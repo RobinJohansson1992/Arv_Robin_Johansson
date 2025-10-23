@@ -4,10 +4,16 @@
     {
         static void Main(string[] args)
         {
-            var Car1 = new Vehicle("Lexus", "RX90", 2005, 290, "tjutjutju..VROOOOM");
+            var car1 = new Car("Lexus", "RX90", 2005, "svart", "tjutjutju..VROOOOM", 4);
 
-            Car1.StartEngine();
+            car1.VehicleInfo();
 
+            Console.Write($"En {car1.Color} {car1.Model} {car1.Brand} startar: ");
+            
+            car1.StartEngine();
+
+            car1.RemoveDoors();
+            
         }
     }
 }

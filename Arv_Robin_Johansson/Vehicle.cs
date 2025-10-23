@@ -11,7 +11,7 @@ namespace Arv_Robin_Johansson
         private string _brand;
         private string _model;
         private int _year;
-        private int _maxSpeed;
+        private string _color;
         private string _startUpNoise;
         
         public string Brand
@@ -29,10 +29,10 @@ namespace Arv_Robin_Johansson
             get { return _year; }
             set { _year = value; }
         }
-        public int MaxSpeed
+        public string Color
         {
-            get { return _maxSpeed; }
-            set { _maxSpeed = value; }
+            get { return _color; }
+            set { _color = value; }
         }
         public string StartUpNoise
         {
@@ -40,20 +40,26 @@ namespace Arv_Robin_Johansson
             set { _startUpNoise = value; }
         }
 
-        public Vehicle(string brand, string model, int year, int maxSpeed, string startUpNoise)
+        public Vehicle(string brand, string model, int year, string color, string startUpNoise)
         {
             Brand = brand;
             Model = model;
             Year = year;
-            MaxSpeed = maxSpeed;
+            Color = color;
             StartUpNoise = startUpNoise;
         }
 
         public void StartEngine()
         {
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(StartUpNoise);
+            Console.ResetColor();
         }
 
+        public void VehicleInfo()
+        {
+            Console.WriteLine($"Märke: {Brand} \nModel: {Model} \nÅrsmodell: {Year} \nMaxfart: {Color} \nStartljud: {StartUpNoise}");
+        }
 
     }
 }

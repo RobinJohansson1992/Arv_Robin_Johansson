@@ -10,14 +10,16 @@ namespace Arv_Robin_Johansson
     {
         //special property for Car:
         public int NumberOfDoors { get; set; } = 4;
-        public Car(string brand, string model, int year, string color, string startUpNoise, int numberOfDoors) : base(brand, model, year, color, startUpNoise)
+        public int Speed { get; set; } = 200;
+        public Car(string brand, string model, int year, int speed, string color, string startUpNoise, int numberOfDoors) : base(brand, model, year, color, startUpNoise)
         {
             NumberOfDoors = numberOfDoors;
+            Speed = speed;
         }
         //Method that displays all the info about the car:
         public void CarInfo()
         {
-            Console.WriteLine($"Märke: {Brand} \nModel: {Model} \nÅrsmodell: {Year} " +
+            Console.WriteLine($"Märke: {Brand} \nModel: {Model} \nÅrsmodell: {Year} \nMaxhastighet: {Speed} km/h" +
                 $"\nFärg: {Color} \nStartljud: {StartUpNoise} \nAntal dörrar: {NumberOfDoors}");
         }
         //Method for removing doors on the car:

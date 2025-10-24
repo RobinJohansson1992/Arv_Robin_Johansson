@@ -4,12 +4,15 @@
     {
         static void Main(string[] args)
         {
+            
+
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Bil:");
             Console.ResetColor();
 
             //create car:
-            var car1 = new Car("Lexus", "RX90", 2005, "svart", "tjutjutju..VROOOOM", 4);
+            var car1 = new Car("Lexus", "RX90", 2005, 200,
+                "svart", "tjutjutju..VROOOOM", 4);
             //displays info about the car:
             car1.CarInfo();
 
@@ -19,6 +22,7 @@
             //Special method for cars:
             car1.RemoveDoors();
 
+            //method to change color of a vehicle:
             car1.ChangeVehicleColor();
             Console.WriteLine($"Bilen har nu färgen: {car1.Color}");
 
@@ -29,7 +33,7 @@
             Console.ResetColor();
 
             //create plane:
-            var plane1 = new Plane("Mustang", "1975", 1975, "röd", "fffFFFRRRRRRR...", 2000);
+            var plane1 = new Plane("Mustang", "P-51", 1940, "röd", "fffFFFRRRRRRR...", 2000);
             //displays info about the plane:
             plane1.PlaneInfo();
 
@@ -41,7 +45,7 @@
             Console.WriteLine($"Planets nya flyghöjd är {plane1.FlightHeight} m.");
             //randomly change the release year of the vehicle:
             plane1.ChangeYear();
-            Console.WriteLine($"Det här fordonet har nu tillverkningsår: {plane1.Year}");
+            Console.WriteLine($"Fordonets tillverkningsår uppdaterades till: {plane1.Year}");
 
             Console.ReadKey();
             Console.Clear();
@@ -63,6 +67,35 @@
             //special method for moped:
             moped1.Trim();
             Console.WriteLine($"Mopeden kan nu köra i {moped1.MaxSpeed} km/h.");
+
+            Console.ReadKey();
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Sportbil:");
+            Console.ResetColor();
+
+            //create sportscar:
+            var lambo = new SportsCar("Lamborghini", "Diablo", 2013,
+                300, "Gul", "CHHHRAAAAHHH", 2, +50);
+            //sportscar info:
+            lambo.CarInfo();
+            Console.WriteLine("Tryck enter för att sätta bilen i sportläge.");
+            Console.ReadKey();
+            //special method for sportscar:
+            Console.WriteLine($"{lambo.Brand} {lambo.Model} har nu en maxhastighet på {lambo.ChangeToSportsMode()} km/h");
+
+            Console.ReadKey();
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Jeep:");
+            Console.ResetColor();
+
+            var jeep1 = new Jeep("Jeep", "Wrangler", 2010, 180,
+                "White", "BRUBRUBRUBR", 4, false);
+
+            jeep1.CarInfo();
+
+            jeep1.FourWheelDrive();
 
         }
     }

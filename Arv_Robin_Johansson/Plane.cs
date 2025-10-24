@@ -23,7 +23,7 @@ namespace Arv_Robin_Johansson
         //method that changes how high the plane can fly:
         public int ChangeHeight()
         {
-            Console.WriteLine("Ange planets nya flyghöjd:");
+            Console.WriteLine("Ange en ny flyghöjd för planet:");
             int userInput;
             while (!int.TryParse(Console.ReadLine(), out userInput) || userInput < 0)
             {

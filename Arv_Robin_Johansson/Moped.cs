@@ -23,7 +23,7 @@ namespace Arv_Robin_Johansson
         //method that makes the moped go faster:
         public int Trim()
         {
-            return MaxSpeed += 10;
+            return MaxSpeed += 20;
         }
     }
 }

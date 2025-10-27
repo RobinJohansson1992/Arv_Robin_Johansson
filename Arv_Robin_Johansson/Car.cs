@@ -17,7 +17,7 @@ namespace Arv_Robin_Johansson
             Speed = speed;
         }
         //Method that displays all the info about the car:
-        public void CarInfo()
+        public override void VehicleInfo()
         {
             Console.WriteLine($"Märke: {Brand} \nModel: {Model} \nÅrsmodell: {Year} \nMaxhastighet: {Speed} km/h" +
                 $"\nFärg: {Color} \nStartljud: {StartUpNoise} \nAntal dörrar: {NumberOfDoors}");

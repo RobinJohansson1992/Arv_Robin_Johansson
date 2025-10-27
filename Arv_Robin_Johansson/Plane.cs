@@ -15,13 +15,13 @@ namespace Arv_Robin_Johansson
             FlightHeight = flightHeight;
         }
         //method that displays all the info about the plane:
-        public void PlaneInfo()
+        public override void VehicleInfo()
         {
             Console.WriteLine($"Märke: {Brand} \nModel: {Model} \nÅrsmodell: {Year} " +
                 $"\nFärg: {Color} \nStartljud: {StartUpNoise} \nFlyghöjd: {FlightHeight} m");
         }
         //method that changes how high the plane can fly:
-        public int ChangeHeight()
+        public int ChangeFlightHeight()
         {
             Console.WriteLine("Ange en ny flyghöjd för planet:");
             int userInput;

@@ -15,6 +15,7 @@ namespace Arv_Robin_Johansson
         public string Color { get; set; } = "silver";
         public string StartUpNoise { get; set; } = "BRUM";
 
+        //basic constructor for all vehicles:
         public Vehicle(string brand, string model, int year, string color, string startUpNoise)
         {
             Brand = brand;
@@ -31,6 +32,13 @@ namespace Arv_Robin_Johansson
             Console.WriteLine(StartUpNoise);
             Console.ResetColor();
         }
+        //mehod that displays info about the vehicle:
+        public virtual void VehicleInfo()
+        {
+            Console.WriteLine($"Märke: {Brand} \nModel: {Model} \nÅrsmodell: {Year}" +
+                $"\nFärg: {Color} \nStartljud: {StartUpNoise}");
+        }
+
         //method that changes the color of the vehicle
         public string ChangeVehicleColor()
         {

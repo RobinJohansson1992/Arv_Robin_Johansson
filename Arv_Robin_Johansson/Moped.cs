@@ -15,7 +15,7 @@ namespace Arv_Robin_Johansson
             MaxSpeed = maxSpeed;
         }
         //method that displays all the info about the moped:
-        public void MopedInfo()
+        public override void VehicleInfo()
         {
             Console.WriteLine($"Märke: {Brand} \nModel: {Model} \nÅrsmodell: {Year} " +
                 $"\nFärg: {Color} \nStartljud: {StartUpNoise} \nMaxfart: {MaxSpeed}");

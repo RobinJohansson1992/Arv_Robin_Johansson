@@ -9,7 +9,8 @@ namespace Arv_Robin_Johansson
     internal class Jeep : Car
     {
         public bool PanelSwitch { get; set; } = false;
-        public Jeep(string brand, string model, int year, int speed, string color, string startUpNoise, int numberOfDoors, bool panelSwitch) : base(brand, model, year, speed, color, startUpNoise, numberOfDoors)
+        public Jeep(string brand, string model, int year, int speed, string color, string startUpNoise, int numberOfDoors, bool panelSwitch) 
+            : base(brand, model, year, speed, color, startUpNoise, numberOfDoors)
         {
             PanelSwitch = panelSwitch;
         }
